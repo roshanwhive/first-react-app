@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const NavbarNew = () => {
   return (
     <>
       <header
         className="header_area sticky-header"
-        style={{ position: "fixed" }}
+        style={{ position: "fixed", backgroundColor: "#e65a5a" }}
       >
         <div className="main_menu">
-          <nav className="navbar navbar-expand-lg navbar-light main_box">
+          <nav
+            className="navbarNew navbar-expand-lg navbar-light main_box"
+            style={{ backgroundColor: "#e65a5a" }}
+          >
             <div className="container">
               {/* <!-- Brand and toggle get grouped for better mobile display --> */}
               <Link className="navbar-brand logo_h" to="/">
@@ -175,4 +178,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarNew;

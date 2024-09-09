@@ -1,19 +1,22 @@
-const BannerShop = () => {
+/* eslint-disable react/prop-types */
+const Breadcrumb = ({ title, link, link1, link2 }) => {
   return (
     <>
       <section className="banner-area organic-breadcrumb">
         <div className="container">
           <div className="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div className="col-first">
-              <h1>Shop Category page</h1>
+              <h1>{title}</h1>
               <nav className="d-flex align-items-center">
                 <a href="index.html">
-                  Home<span className="lnr lnr-arrow-right"></span>
+                  {link}
+                  <span className="lnr lnr-arrow-right"></span>
                 </a>
                 <a href="#">
-                  Shop<span className="lnr lnr-arrow-right"></span>
+                  {link1}
+                  <span className="lnr lnr-arrow-right"></span>
                 </a>
-                <a href="category.html">Fashon Category</a>
+                <a href="category.html">{link2}</a>
               </nav>
             </div>
           </div>
@@ -23,4 +26,4 @@ const BannerShop = () => {
   );
 };
 
-export default BannerShop;
+export default Breadcrumb;
