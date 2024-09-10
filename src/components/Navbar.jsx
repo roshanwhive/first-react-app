@@ -11,6 +11,7 @@ const Navbar = () => {
           <nav className="navbar navbar-expand-lg navbar-light main_box">
             <div className="container">
               {/* <!-- Brand and toggle get grouped for better mobile display --> */}
+
               <Link className="navbar-brand logo_h" to="/">
                 <img src="/assets/img/logo.png" alt="" />
               </Link>
@@ -39,7 +40,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item submenu dropdown">
-                    <a
+                    <Link
                       href="#"
                       className="nav-link dropdown-toggle"
                       data-toggle="dropdown"
@@ -48,7 +49,7 @@ const Navbar = () => {
                       aria-expanded="false"
                     >
                       Shop
-                    </a>
+                    </Link>
                     <ul className="dropdown-menu">
                       <li className="nav-item">
                         <Link className="nav-link" to="/shop">
@@ -56,29 +57,29 @@ const Navbar = () => {
                         </Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="single-product.html">
+                        <Link className="nav-link" href="single-product.html">
                           Product Details
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="checkout.html">
+                        <Link className="nav-link" href="checkout.html">
                           Product Checkout
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="cart.html">
+                        <Link className="nav-link" href="cart.html">
                           Shopping Cart
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="confirmation.html">
+                        <Link className="nav-link" href="confirmation.html">
                           Confirmation
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item submenu dropdown">
-                    <a
+                    <Link
                       href="#"
                       className="nav-link dropdown-toggle"
                       data-toggle="dropdown"
@@ -87,22 +88,22 @@ const Navbar = () => {
                       aria-expanded="false"
                     >
                       Blog
-                    </a>
+                    </Link>
                     <ul className="dropdown-menu">
                       <li className="nav-item">
-                        <a className="nav-link" href="blog.html">
+                        <Link className="nav-link" href="blog.html">
                           Blog
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="single-blog.html">
+                        <Link className="nav-link" href="single-blog.html">
                           Blog Details
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item submenu dropdown">
-                    <a
+                    <Link
                       href="#"
                       className="nav-link dropdown-toggle"
                       data-toggle="dropdown"
@@ -111,22 +112,22 @@ const Navbar = () => {
                       aria-expanded="false"
                     >
                       Pages
-                    </a>
+                    </Link>
                     <ul className="dropdown-menu">
                       <li className="nav-item">
-                        <a className="nav-link" href="login.html">
+                        <Link className="nav-link" href="login.html">
                           Login
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="tracking.html">
+                        <Link className="nav-link" href="tracking.html">
                           Tracking
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="elements.html">
+                        <Link className="nav-link" href="elements.html">
                           Elements
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -138,9 +139,9 @@ const Navbar = () => {
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
                   <li className="nav-item">
-                    <a href="#" className="cart">
+                    <Link href="#" className="cart">
                       <span className="ti-bag"></span>
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
                     <button className="search">

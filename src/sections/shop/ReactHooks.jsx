@@ -39,9 +39,9 @@ import { useEffect } from "react";
 const ReactHooks = () => {
   const [num, setNum] = useState(0);
 
-  useEffect(() => {
-    console.log("Hello");
-  }, [num]);
+  // useEffect(() => {
+  //   console.log("Hello");
+  // }, [num]);
 
   const handleClick = () => {
     setNum(num + 1);
