@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const NavbarNew = () => {
   return (
     <>
       <header
         className="header_area sticky-header"
-        style={{ position: "fixed" }}
+        style={{ position: "fixed", backgroundColor: "#e65a5a" }}
       >
         <div className="main_menu">
-          <nav className="navbar navbar-expand-lg navbar-light main_box">
+          <nav
+            className="navbarNew navbar-expand-lg navbar-light main_box"
+            style={{ backgroundColor: "#e65a5a" }}
+          >
             <div className="container">
               {/* <!-- Brand and toggle get grouped for better mobile display --> */}
-              
               <Link className="navbar-brand logo_h" to="/">
                 <img src="/assets/img/logo.png" alt="" />
               </Link>
@@ -40,7 +42,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="nav-item submenu dropdown">
-                    <Link
+                    <a
                       href="#"
                       className="nav-link dropdown-toggle"
                       data-toggle="dropdown"
@@ -49,7 +51,7 @@ const Navbar = () => {
                       aria-expanded="false"
                     >
                       Shop
-                    </Link>
+                    </a>
                     <ul className="dropdown-menu">
                       <li className="nav-item">
                         <Link className="nav-link" to="/shop">
@@ -57,29 +59,29 @@ const Navbar = () => {
                         </Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" href="single-product.html">
+                        <a className="nav-link" href="single-product.html">
                           Product Details
-                        </Link>
+                        </a>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" href="checkout.html">
+                        <a className="nav-link" href="checkout.html">
                           Product Checkout
-                        </Link>
+                        </a>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" href="cart.html">
+                        <a className="nav-link" href="cart.html">
                           Shopping Cart
-                        </Link>
+                        </a>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" href="confirmation.html">
+                        <a className="nav-link" href="confirmation.html">
                           Confirmation
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item submenu dropdown">
-                    <Link
+                    <a
                       href="#"
                       className="nav-link dropdown-toggle"
                       data-toggle="dropdown"
@@ -88,22 +90,22 @@ const Navbar = () => {
                       aria-expanded="false"
                     >
                       Blog
-                    </Link>
+                    </a>
                     <ul className="dropdown-menu">
                       <li className="nav-item">
-                        <Link className="nav-link" href="blog.html">
+                        <a className="nav-link" href="blog.html">
                           Blog
-                        </Link>
+                        </a>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" href="single-blog.html">
+                        <a className="nav-link" href="single-blog.html">
                           Blog Details
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item submenu dropdown">
-                    <Link
+                    <a
                       href="#"
                       className="nav-link dropdown-toggle"
                       data-toggle="dropdown"
@@ -112,22 +114,22 @@ const Navbar = () => {
                       aria-expanded="false"
                     >
                       Pages
-                    </Link>
+                    </a>
                     <ul className="dropdown-menu">
                       <li className="nav-item">
-                        <Link className="nav-link" href="login.html">
+                        <a className="nav-link" href="login.html">
                           Login
-                        </Link>
+                        </a>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" href="tracking.html">
+                        <a className="nav-link" href="tracking.html">
                           Tracking
-                        </Link>
+                        </a>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" href="elements.html">
+                        <a className="nav-link" href="elements.html">
                           Elements
-                        </Link>
+                        </a>
                       </li>
                     </ul>
                   </li>
@@ -139,9 +141,9 @@ const Navbar = () => {
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
                   <li className="nav-item">
-                    <Link href="#" className="cart">
+                    <a href="#" className="cart">
                       <span className="ti-bag"></span>
-                    </Link>
+                    </a>
                   </li>
                   <li className="nav-item">
                     <button className="search">
@@ -176,4 +178,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarNew;
