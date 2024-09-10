@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Navbar from "../components/Navbar";
 import NavbarNew from "../components/NavbarNew";
 import AUthLayout from "../layout/AUthLayout";
+import ShopCategory from "../sections/shop/ShopCategory";
 
 const Router = () => {
   const location = useLocation();
@@ -15,11 +16,13 @@ const Router = () => {
       {location?.pathname === "/login" ? <NavbarNew /> : <Navbar />}
 
       <Routes>
+        <Route path="/shop" element={<Shop />} />
         <Route path="/" element={<AUthLayout />}>
+        <Route path="/login" element={<Login />} />
           <Route index element={<Home />} />
 
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/shopcategory" element={<ShopCategory />} />
+
         </Route>
       </Routes>
     </>

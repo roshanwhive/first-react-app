@@ -52,7 +52,7 @@ const Navbar = () => {
                     </Link>
                     <ul className="dropdown-menu">
                       <li className="nav-item">
-                        <Link className="nav-link" to="/shop">
+                        <Link className="nav-link" to="/shopcategory">
                           Shop Category
                         </Link>
                       </li>
