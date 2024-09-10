@@ -16,9 +16,10 @@ const Router = () => {
 
       <Routes>
         <Route path="/" element={<AUthLayout />}>
+          <div className=""></div>
+          <Route path="/shop" element={<Shop />} />
           <Route index element={<Home />} />
 
-          <Route path="/shop" element={<Shop />} />
           <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
