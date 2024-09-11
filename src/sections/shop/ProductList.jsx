@@ -6,12 +6,9 @@ import { useEffect } from "react";
 const ProductList = () => {
   const [productData, setProductData] = useState([]);
 
-  console.log(productData);
   const fetchProduct = async () => {
     try {
       const response = await axios.get("https://dummyjson.com/products");
-      //   setProducts(re)
-      console.log(response);
       setProductData(response?.data?.products);
     } catch (error) {
       console.log(error);
@@ -665,8 +662,8 @@ const ProductList = () => {
             <section className="lattest-product-area pb-40 category-list">
               <div className="row">
                 {/* <!-- single product --> */}
-                {productData?.map((item, index) => (
-                  <ProductCard key={index} data={item} />
+                {productData?.map((item) => (
+                  <ProductCard key={item?.id} productData={item} />
                 ))}
               </div>
             </section>

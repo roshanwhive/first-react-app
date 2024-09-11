@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-const Breadcrumb = ({ title, link, link1, link2 }) => {
+const Breadcrumb = (props) => {
+  const { title, link, link1, link2 } = props;
+
   return (
     <>
       <section className="banner-area organic-breadcrumb">

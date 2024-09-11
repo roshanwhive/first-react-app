@@ -1,7 +1,7 @@
 import Features from "../sections/home/Features";
 import HomeBanner from "../sections/home/HomeBanner";
+import LatestProduct from "../sections/home/LatestProduct";
 import StartCategory from "../sections/home/StartCategory";
-import Navbar from "../components/Navbar";
 import Breadcrumb from "../sections/shop/BannerShop";
 const Home = () => {
   return (
@@ -12,6 +12,8 @@ const Home = () => {
       <Features />
 
       <StartCategory />
+
+      <LatestProduct />
     </>
   );
 };
