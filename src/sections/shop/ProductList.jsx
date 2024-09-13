@@ -1,22 +1,19 @@
 import { useState } from "react";
 import ProductCard from "../../components/ProductCard";
-import axios from "axios";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProduct } from "../../../redux/slice/productSlice";
 
 const ProductList = () => {
   const [productData, setProductData] = useState([]);
 
-  const fetchProduct = async () => {
-    try {
-      const response = await axios.get("https://dummyjson.com/products");
-      setProductData(response?.data?.products);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const dispatch = useDispatch();
+
+  const { allProduct } = useSelector((state) => state.product);
+
   useEffect(() => {
-    fetchProduct();
-  }, []);
+    dispatch(getAllProduct());
+  }, [dispatch]);
 
   return (
     <>
@@ -662,7 +659,7 @@ const ProductList = () => {
             <section className="lattest-product-area pb-40 category-list">
               <div className="row">
                 {/* <!-- single product --> */}
-                {productData?.map((item) => (
+                {allProduct?.map((item) => (
                   <ProductCard key={item?.id} productData={item} />
                 ))}
               </div>

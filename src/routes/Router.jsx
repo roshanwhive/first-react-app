@@ -1,25 +1,24 @@
-import { Route, Routes, useLocation } from "react-router";
+import { Route, Routes } from "react-router";
 import Home from "../pages/Home";
 import Shop from "../pages/Shop";
 import Login from "../pages/Login";
 import Navbar from "../components/Navbar";
-import NavbarNew from "../components/NavbarNew";
-import AUthLayout from "../layout/AUthLayout";
-import ShopCategory from "../sections/shop/ShopCategory";
+
+import Register from "../pages/Register";
+import MainLayout from "../layout/MainLayout";
 
 const Router = () => {
-  const location = useLocation();
-
   return (
     <>
-      {location?.pathname === "/login" ? <NavbarNew /> : <Navbar />}
+      <Navbar />
 
       <Routes>
-        <Route path="/" element={<AUthLayout />}>
+        <Route path="/" element={<MainLayout />}>
           <Route path="shop" element={<Shop />} />
           <Route index element={<Home />} />
 
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
     </>

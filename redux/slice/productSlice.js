@@ -1,19 +1,20 @@
 /* eslint-disable no-unused-vars */
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
-import { ProductService } from "../reducer/prodReducer";
+import { ProductAction } from "../action/productAction";
 
 const initialState = {
   allProduct: [],
-  clientDetail: {},
+  isError: false,
   isSuccess: false,
   isLoading: false,
+  message: [],
 };
 
 export const getAllProduct = createAsyncThunk(
   "get_all_product",
   async (thunkAPI) => {
     try {
-      return await ProductService.getAllProductData();
+      return await ProductAction.getAllProductData();
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -28,17 +29,16 @@ export const ProductSlice = createSlice({
     builder
       .addCase(getAllProduct.pending, (state) => {
         state.isLoading = true;
-        state.allClient = [];
       })
       .addCase(getAllProduct.fulfilled, (state, action) => {
+        console.log(action);
+        state.allProduct = action.payload?.products;
         state.isLoading = false;
-        state.allProduct = action?.payload?.data;
         state.isSuccess = true;
       })
-      .addCase(getAllProduct.rejected, (state) => {
+      .addCase(getAllProduct.rejected, (state, action) => {
+        state.isError = true;
         state.isLoading = false;
-        state.isSuccess = false;
-        state.allProduct = [];
       });
   },
 });
